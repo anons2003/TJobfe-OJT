@@ -1,0 +1,8 @@
+.card.blog .title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Số dòng tối đa hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Đảm bảo nếu tiêu đề dài hơn 2 dòng thì hiển thị dấu ba chấm */
+  }
+  
