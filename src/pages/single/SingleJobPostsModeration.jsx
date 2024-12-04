@@ -27,7 +27,7 @@ const SingleJobPostsModeration = () => {
   useEffect(() => {
     const fetchJob = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/jobs/view/${id}`);
+        const response = await axios.get(`https://topjob-ojt-790cf940c139.herokuapp.com/jobs/view/${id}`);
         setJob(response.data);
       } catch (error) {
         setError(error.message);
@@ -42,7 +42,7 @@ const SingleJobPostsModeration = () => {
   const handleApproval = async () => {
     setDisableButtons(true);
     try {
-      const response = await axios.patch(`http://localhost:8080/jobs/approval/${id}`, { isActive: true });
+      const response = await axios.patch(`https://topjob-ojt-790cf940c139.herokuapp.com/jobs/approval/${id}`, { isActive: true });
       if (response.status === 200) {
         setJob((prevJob) => ({ ...prevJob, isActive: true }));
         setSuccessMessage('Job approval successful.');
@@ -69,7 +69,7 @@ const SingleJobPostsModeration = () => {
         otherReason: selectedRejectReasons.includes('Other') ? otherReason : '',
       };
 
-      const response = await axios.patch(`http://localhost:8080/jobs/rejection/${id}`, rejectionData);
+      const response = await axios.patch(`https://topjob-ojt-790cf940c139.herokuapp.com/jobs/rejection/${id}`, rejectionData);
       if (response.status === 200) {
         setJob((prevJob) => ({ ...prevJob, isActive: false }));
         setSuccessMessage('Job rejection successful.');

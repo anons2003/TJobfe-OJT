@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const fetchBookmarkedJobs = async () => {
   const token = sessionStorage.getItem("token");
   const { data } = await axios.get(
-    "http://localhost:8080/jobSeeker/bookmarks",
+    "https://topjob-ojt-790cf940c139.herokuapp.com/jobSeeker/bookmarks",
     {
       headers: {
         Authorization: token,

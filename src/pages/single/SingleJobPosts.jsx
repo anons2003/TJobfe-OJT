@@ -17,7 +17,7 @@ const SingleJobPosts = () => {
   useEffect(() => {
     const fetchJob = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/jobs/view/${id}`);
+        const response = await axios.get(`https://topjob-ojt-790cf940c139.herokuapp.com/jobs/view/${id}`);
         setJob(response.data);
       } catch (error) {
         setError(error.message);
@@ -30,7 +30,7 @@ const SingleJobPosts = () => {
   }, [id]);
   const handleDelete = async () => {
     try {
-      const response = await axios.delete(`http://localhost:8080/jobs/delete/${id}`);
+      const response = await axios.delete(`https://topjob-ojt-790cf940c139.herokuapp.com/jobs/delete/${id}`);
       console.log(response.data);
       setDeleteMessage('Job deleted successfully!');
       window.alert("Job deleted successfully!");  // Hiển thị alert thông báo thành công

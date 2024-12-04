@@ -22,7 +22,7 @@ const UserDetail = () => {
 
     const fetchUser = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/jobSeeker/candidate-profile/${jid}`);
+        const response = await fetch(`https://topjob-ojt-790cf940c139.herokuapp.com/jobSeeker/candidate-profile/${jid}`);
         if (!response.ok) {
           throw new Error('Failed to fetch user');
         }

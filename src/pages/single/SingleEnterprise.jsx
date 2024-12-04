@@ -14,7 +14,7 @@ const SingleEnterprise = () => {
     useEffect(() => {
         const fetchEnterprise = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/enterprises/view/${id}`);
+                const response = await fetch(`https://topjob-ojt-790cf940c139.herokuapp.com/enterprises/view/${id}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch enterprise');
                 }

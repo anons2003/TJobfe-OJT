@@ -25,7 +25,7 @@ const NewPackage = ({ title }) => {
         e.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:8080/packageServices", formData, {
+            const response = await axios.post("https://topjob-ojt-790cf940c139.herokuapp.com/packageServices", formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

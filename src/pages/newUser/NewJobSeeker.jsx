@@ -26,7 +26,7 @@ const NewJobSeeker = ({ title }) => {
         console.log(formData); // In ra formData để kiểm tra
 
         try {
-            const response = await axios.post("http://localhost:8080/signup", formData, {
+            const response = await axios.post("https://topjob-ojt-790cf940c139.herokuapp.com/signup", formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

@@ -16,7 +16,7 @@ export default function BlogDetail() {
         const fetchBlog = async () => {
             try {
                 // Replace with actual API endpoint to fetch blog detail by id
-                const response = await fetch(`http://localhost:8080/blogs/${id}`);
+                const response = await fetch(`https://topjob-ojt-790cf940c139.herokuapp.com/blogs/${id}`);
                 if (!response.ok) {
                     throw new Error("Failed to fetch blog");
                 }

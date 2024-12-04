@@ -18,7 +18,7 @@ const Widget = ({ type }) => {
 
   useEffect(() => {
     if (type === "user") {
-      axios.get("http://localhost:8080/totalUsers")
+      axios.get("https://topjob-ojt-790cf940c139.herokuapp.com/totalUsers")
         .then(response => {
           setTotalUsers(response.data);
           setIsLoading(false);
@@ -29,7 +29,7 @@ const Widget = ({ type }) => {
           setIsLoading(false);
         });
     } else if (type === "postjob") {
-      axios.get("http://localhost:8080/jobs/totalJob")
+      axios.get("https://topjob-ojt-790cf940c139.herokuapp.com/jobs/totalJob")
         .then(response => {
           setTotalJobs(response.data);
           setIsLoading(false);
@@ -40,7 +40,7 @@ const Widget = ({ type }) => {
           setIsLoading(false);
         });
     } else if (type === "earning") {
-      axios.get("http://localhost:8080/blogs/totalBlog")
+      axios.get("https://topjob-ojt-790cf940c139.herokuapp.com/blogs/totalBlog")
         .then(response => {
           setTotalPackageServices(response.data);
           setIsLoading(false);

@@ -15,7 +15,7 @@ const DatatableBlog = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await fetch('http://localhost:8080/blogs/getAllBlogs');
+                const response = await fetch('https://topjob-ojt-790cf940c139.herokuapp.com/blogs/getAllBlogs');
                 if (!response.ok) {
                     throw new Error('Failed to fetch blogs');
                 }
@@ -44,7 +44,7 @@ const DatatableBlog = () => {
 
     const handleToggleActive = async (id) => {
         try {
-            const response = await axios.patch(`http://localhost:8080/blogs/toggle-active/${id}`);
+            const response = await axios.patch(`https://topjob-ojt-790cf940c139.herokuapp.com/blogs/toggle-active/${id}`);
             if (response.status === 200) {
                 const updatedBlogs = blogs.map(blog => {
                     if (blog.id === id) {

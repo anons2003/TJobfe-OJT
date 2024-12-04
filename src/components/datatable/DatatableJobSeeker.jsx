@@ -12,7 +12,7 @@ const DatatableJobSeeker = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:8080/jobSeeker/list');
+        const response = await fetch('https://topjob-ojt-790cf940c139.herokuapp.com/jobSeeker/list');
         if (!response.ok) {
           throw new Error('Failed to fetch users');
         }
@@ -45,7 +45,7 @@ const DatatableJobSeeker = () => {
 
   const handleToggleActive = async (id, currentIsActive) => {
     try {
-      const response = await fetch(`http://localhost:8080/job-seekers/toggle-active/${id}`, {
+      const response = await fetch(`https://topjob-ojt-790cf940c139.herokuapp.com/job-seekers/toggle-active/${id}`, {
         method: 'PATCH',
       });
 

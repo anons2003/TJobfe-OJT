@@ -39,10 +39,10 @@ export default function JobPost() {
     async function fetchData() {
       try {
         const jobTypesResponse = await axios.get(
-          "http://localhost:8080/job-types"
+          "https://topjob-ojt-790cf940c139.herokuapp.com/job-types"
         );
         const jobCategoriesResponse = await axios.get(
-          "http://localhost:8080/job-categories"
+          "https://topjob-ojt-790cf940c139.herokuapp.com/job-categories"
         );
         setJobTypes(jobTypesResponse.data);
         setJobCategories(jobCategoriesResponse.data);
@@ -93,7 +93,7 @@ export default function JobPost() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/jobs/save",
+        "https://topjob-ojt-790cf940c139.herokuapp.com/jobs/save",
         payload
       );
       console.log("Job post submitted successfully:", response.data);

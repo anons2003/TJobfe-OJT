@@ -19,7 +19,7 @@ const EditBlog = () => {
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/blogs/${id}`);
+                const response = await axios.get(`https://topjob-ojt-790cf940c139.herokuapp.com/blogs/${id}`);
                 setBlogData(response.data);
             } catch (error) {
                 setError(error.message);
@@ -42,7 +42,7 @@ const EditBlog = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:8080/blogs/edit/${id}`, blogData);
+            await axios.put(`https://topjob-ojt-790cf940c139.herokuapp.com/blogs/edit/${id}`, blogData);
             setSuccessMessage('Blog updated successfully!');
             setTimeout(() => {
                 navigate('/blogs');

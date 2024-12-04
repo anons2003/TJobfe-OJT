@@ -61,7 +61,7 @@ export const ContactUs = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/jobSeeker/send/${jid}`,
+        `https://topjob-ojt-790cf940c139.herokuapp.com/jobSeeker/send/${jid}`,
         data
       );
       if (response.status === 200) {

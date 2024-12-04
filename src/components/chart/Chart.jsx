@@ -19,7 +19,7 @@ const Chart = ({ aspect, title }) => {
     const fetchJobPostsStatistics = async () => {
       try {
   
-        const response = await axios.get(`http://localhost:8080/jobs/monthly-job-posts?year=${year}`);
+        const response = await axios.get(`https://topjob-ojt-790cf940c139.herokuapp.com/jobs/monthly-job-posts?year=${year}`);
         console.log(response.data)
         const transformedData = transformData(response.data); 
         setData(transformedData); 

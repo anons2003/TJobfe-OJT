@@ -9,7 +9,7 @@ const DatatableAdmin = () => {
     useEffect(() => {
         const fetchAdmins = async () => {
             try {
-                const response = await fetch('http://localhost:8080/admins/list');
+                const response = await fetch('https://topjob-ojt-790cf940c139.herokuapp.com/admins/list');
                 if (!response.ok) {
                     throw new Error('Failed to fetch admins');
                 }

@@ -15,7 +15,7 @@ export default function BlogDetail() {
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/blogs/${id}`);
+                const response = await fetch(`https://topjob-ojt-790cf940c139.herokuapp.com/blogs/${id}`);
                 if (!response.ok) {
                     throw new Error("Failed to fetch blog");
                 }

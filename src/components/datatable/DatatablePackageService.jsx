@@ -11,7 +11,7 @@ const DatatablePackageService = () => {
     useEffect(() => {
         const fetchPackages = async () => {
             try {
-                const response = await fetch('http://localhost:8080/packageServices/list');
+                const response = await fetch('https://topjob-ojt-790cf940c139.herokuapp.com/packageServices/list');
                 if (!response.ok) {
                     throw new Error('Failed to fetch packages');
                 }
@@ -40,7 +40,7 @@ const DatatablePackageService = () => {
 
     const handleDeletePackage = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8080/packageServices/${id}`, {
+            const response = await fetch(`https://topjob-ojt-790cf940c139.herokuapp.com/packageServices/${id}`, {
                 method: 'DELETE',
             });
 

@@ -11,7 +11,7 @@ const Datatablejob = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8080/jobs");
+        const response = await fetch("https://topjob-ojt-790cf940c139.herokuapp.com/jobs");
         if (!response.ok) {
           throw new Error("Failed to fetch job posts");
         }
@@ -29,7 +29,7 @@ const Datatablejob = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8080/jobs/${id}`, {
+      const response = await fetch(`https://topjob-ojt-790cf940c139.herokuapp.com/jobs/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {

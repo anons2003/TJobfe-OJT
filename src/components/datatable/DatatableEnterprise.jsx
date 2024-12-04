@@ -12,7 +12,7 @@ const DatatableEnterprise = () => {
     useEffect(() => {
         const fetchEnterprises = async () => {
             try {
-                const response = await fetch('http://localhost:8080/enterprises/list');
+                const response = await fetch('https://topjob-ojt-790cf940c139.herokuapp.com/enterprises/list');
                 if (!response.ok) {
                     throw new Error('Failed to fetch enterprises');
                 }
@@ -44,7 +44,7 @@ const DatatableEnterprise = () => {
 
     const handleToggleActive = async (id, currentIsActive) => {
         try {
-            const response = await fetch(`http://localhost:8080/enterprises/toggle-active/${id}`, {
+            const response = await fetch(`https://topjob-ojt-790cf940c139.herokuapp.com/enterprises/toggle-active/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

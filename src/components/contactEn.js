@@ -62,7 +62,7 @@ export const ContactEm = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/enterprises/send/${eid}`,
+        `https://topjob-ojt-790cf940c139.herokuapp.com/enterprises/send/${eid}`,
         data
       );
       if (response.status === 200) {

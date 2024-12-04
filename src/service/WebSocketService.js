@@ -4,7 +4,7 @@ import { Client } from "@stomp/stompjs";
 let stompClient = null;
 
 export const connect = (userId, onMessageReceived) => {
-  const socket = new SockJS("http://localhost:8080/ws"); // Adjust the URL to your server's WebSocket endpoint
+  const socket = new SockJS("https://topjob-ojt-790cf940c139.herokuapp.com/ws"); // Adjust the URL to your server's WebSocket endpoint
   stompClient = new Client({
     webSocketFactory: () => socket,
     reconnectDelay: 5000,

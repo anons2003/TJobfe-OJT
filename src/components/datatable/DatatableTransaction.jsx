@@ -10,7 +10,7 @@ const DatatablePayment = () => {
     useEffect(() => {
         const fetchPayments = async () => {
             try {
-                const response = await fetch('http://localhost:8080/payment/list');
+                const response = await fetch('https://topjob-ojt-790cf940c139.herokuapp.com/payment/list');
                 if (!response.ok) {
                     throw new Error('Failed to fetch payments');
                 }
